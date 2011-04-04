@@ -37,15 +37,18 @@ while attacking > 0 and defending > 0:
 
 	for r, b in zip(reversed(red_dice), reversed(blue_dice)):
 		if options.verbose:
-			print r, b,
+			print "attacker:", r, "defendant:", b,
 		if r > b:
 			attacking -= 1
 			if options.verbose:
-				print " attacker wins"
+				print "-> attacker wins"
 		else:
 			defending -= 1
 			if options.verbose:
-				print " defendant wins"
+				print "-> defendant wins"
+
+	if options.verbose:
+		print
 
 if attacking > 0:
 	print "attacker wins with", attacking, "units left"
