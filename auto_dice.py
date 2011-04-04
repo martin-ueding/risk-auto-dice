@@ -15,6 +15,7 @@ def main():
 		print "call with -h to get help"
 		sys.exit(1)
 
+	# import the number of units fighting
 	attacking = int(args[0])
 	defending = int(args[1])
 
@@ -34,27 +35,28 @@ def main():
 		blue_dice.sort()
 
 		if options.verbose:
-			print "the attacker:", red_dice, "the defendant:", blue_dice
+			print "the attacker: %s, the defendant: %s" % (red_dice, blue_dice)
 
 		for r, b in zip(reversed(red_dice), reversed(blue_dice)):
-			if options.verbose:
-				print "attacker:", r, "defendant:", b,
 			if r > b:
 				attacking -= 1
 				if options.verbose:
-					print "-> attacker wins"
+					winner = "attacker"
 			else:
 				defending -= 1
 				if options.verbose:
-					print "-> defendant wins"
+					winner = "defendant"
+
+			if options.verbose:
+				print "%s vs %s, winner: %s" % (r, b, winner)
 
 		if options.verbose:
 			print
 
 	if attacking > 0:
-		print "attacker wins with", attacking, "units left"
+		print "attacker wins with %s units left", attacking
 	else:
-		print "defendant wins with", defending, "units left"
+		print "defendant wins with %s units left", defending
 		
 
 if __name__ == "__main__":
