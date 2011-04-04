@@ -48,8 +48,8 @@ while attacking > 0 and defending > 0:
 				print " defendant wins"
 
 if attacking > 0:
-	print "attacker wins with", attacking, "units"
+	print "attacker wins with", attacking, "units left"
 else:
-	print "defendant wins with", defending, "units"
+	print "defendant wins with", defending, "units left"
 	
 
