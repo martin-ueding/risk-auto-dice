@@ -3,16 +3,19 @@
 
 import sys
 import random
+import optparse
 
-if len(sys.argv) < 3:
-	print "usage: auto_dice.py attacking defending [-v]"
+parser = optparse.OptionParser(description="automates the dice rolling in the classic game 'risk'", usage="usage: %prog attacking defending")
+parser.add_option("-v", "--verbose", dest="verbose", action="store_true", default=False, help="show each step of rolling the dice")
+(options, args) = parser.parse_args()
+del parser
+
+if len(args) != 2:
+	print "call with -h to get help"
 	sys.exit(1)
 
-# TODO use optparse here
-verbose = len(sys.argv) == 4 and sys.argv[3] == "-v"
-
-attacking = int(sys.argv[1])
-defending = int(sys.argv[2])
+attacking = int(args[0])
+defending = int(args[1])
 
 # fight until the last man standing
 while attacking > 0 and defending > 0:
@@ -29,19 +32,19 @@ while attacking > 0 and defending > 0:
 	red_dice.sort()
 	blue_dice.sort()
 
-	if verbose:
+	if options.verbose:
 		print "the attacker:", red_dice, "the defendant:", blue_dice
 
 	for r, b in zip(reversed(red_dice), reversed(blue_dice)):
-		if verbose:
+		if options.verbose:
 			print r, b,
 		if r > b:
 			attacking -= 1
-			if verbose:
+			if options.verbose:
 				print " attacker wins"
 		else:
 			defending -= 1
-			if verbose:
+			if options.verbose:
 				print " defendant wins"
 
 if attacking > 0:
