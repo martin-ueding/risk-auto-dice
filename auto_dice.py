@@ -4,15 +4,20 @@
 import sys
 import random
 import optparse
+import gettext
 
 def main():
-	parser = optparse.OptionParser(description="automates the dice rolling in the classic game 'risk'", usage="usage: %prog attacking defending")
-	parser.add_option("-v", "--verbose", dest="verbose", action="store_true", default=False, help="show each step of rolling the dice")
+	gettext.bindtextdomain("main", "l10n")
+	gettext.textdomain("main")
+	_ = gettext.gettext
+
+	parser = optparse.OptionParser(description=_('automates the dice rolling in the classic game "risk"'), usage=_("usage: %prog attacking defending"))
+	parser.add_option("-v", "--verbose", dest="verbose", action="store_true", default=False, help=_("show each step of rolling the dice"))
 	(options, args) = parser.parse_args()
 	del parser
 
 	if len(args) != 2:
-		print "call with -h to get help"
+		print _("call with -h to get help")
 		sys.exit(1)
 
 	# import the number of units fighting
@@ -35,28 +40,28 @@ def main():
 		blue_dice.sort()
 
 		if options.verbose:
-			print "the attacker: %s, the defender: %s" % (red_dice, blue_dice)
+			print _("the attacker: %(red_dice_list)s, the defender: %(blue_dice_list)s") % {"red_dice_list": red_dice, "blue_dice_list": blue_dice}
 
 		for r, b in zip(reversed(red_dice), reversed(blue_dice)):
 			if r > b:
 				attacking -= 1
 				if options.verbose:
-					winner = "attacker"
+					winner = _("attacker")
 			else:
 				defending -= 1
 				if options.verbose:
-					winner = "defender"
+					winner = _("defender")
 
 			if options.verbose:
-				print "%s vs %s, winner: %s" % (r, b, winner)
+				print _("%(red)s vs %(blue)s, winner: %(winner)s") % {"red": r, "blue": b, "winner": winner}
 
 		if options.verbose:
 			print
 
 	if attacking > 0:
-		print "attacker wins with %s units left", attacking
+		print _("attacker wins with %s units left"), attacking
 	else:
-		print "defender wins with %s units left", defending
+		print _("defender wins with %s units left"), defending
 		
 
 if __name__ == "__main__":

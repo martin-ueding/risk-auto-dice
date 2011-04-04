@@ -1,0 +1,62 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2011-04-05 00:15+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: auto_dice.py:14
+msgid "automates the dice rolling in the classic game \"risk\""
+msgstr ""
+
+#: auto_dice.py:14
+msgid "usage: %prog attacking defending"
+msgstr ""
+
+#: auto_dice.py:15
+msgid "show each step of rolling the dice"
+msgstr ""
+
+#: auto_dice.py:20
+msgid "call with -h to get help"
+msgstr ""
+
+#: auto_dice.py:43
+#, python-format
+msgid "the attacker: %(red_dice_list)s, the defender: %(blue_dice_list)s"
+msgstr ""
+
+#: auto_dice.py:49
+msgid "attacker"
+msgstr ""
+
+#: auto_dice.py:53
+msgid "defender"
+msgstr ""
+
+#: auto_dice.py:56
+#, python-format
+msgid "%(red)s vs %(blue)s, winner: %(winner)s"
+msgstr ""
+
+#: auto_dice.py:62
+#, python-format
+msgid "attacker wins with %s units left"
+msgstr ""
+
+#: auto_dice.py:64
+#, python-format
+msgid "defender wins with %s units left"
+msgstr ""
