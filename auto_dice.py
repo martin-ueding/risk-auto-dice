@@ -5,9 +5,10 @@ import sys
 import random
 
 if len(sys.argv) < 3:
-	print "usage: auto_dice.py attacking defending -v"
+	print "usage: auto_dice.py attacking defending [-v]"
 	sys.exit(1)
 
+# TODO use optparse here
 verbose = len(sys.argv) == 4 and sys.argv[3] == "-v"
 
 attacking = int(sys.argv[1])
