@@ -35,7 +35,7 @@ def main():
 		blue_dice.sort()
 
 		if options.verbose:
-			print "the attacker: %s, the defendant: %s" % (red_dice, blue_dice)
+			print "the attacker: %s, the defender: %s" % (red_dice, blue_dice)
 
 		for r, b in zip(reversed(red_dice), reversed(blue_dice)):
 			if r > b:
@@ -45,7 +45,7 @@ def main():
 			else:
 				defending -= 1
 				if options.verbose:
-					winner = "defendant"
+					winner = "defender"
 
 			if options.verbose:
 				print "%s vs %s, winner: %s" % (r, b, winner)
@@ -56,7 +56,7 @@ def main():
 	if attacking > 0:
 		print "attacker wins with %s units left", attacking
 	else:
-		print "defendant wins with %s units left", defending
+		print "defender wins with %s units left", defending
 		
 
 if __name__ == "__main__":
