@@ -13,8 +13,8 @@ def main():
 	gettext.textdomain("main")
 	_ = gettext.gettext
 
-	parser = optparse.OptionParser(description=_('automates the dice rolling in the classic game "risk"'), usage=_("usage: %prog attacking defending"))
-	parser.add_option("-v", "--verbose", dest="verbose", action="store_true", default=False, help=_("show each step of rolling the dice"))
+	parser = optparse.OptionParser(description=_('automates the dice rolling in the classic game "risk"').decode("utf-8"), usage=_("usage: %prog attacking defending").decode("utf-8"))
+	parser.add_option("-v", "--verbose", dest="verbose", action="store_true", default=False, help=_("show each step of rolling the dice").decode("utf-8"))
 	(options, args) = parser.parse_args()
 	del parser
 
