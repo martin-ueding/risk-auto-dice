@@ -1,0 +1,9 @@
+.\" Copyright (c) 2011 Martin Ueding <dev@martin-ueding.de>
+.TH man 1 "2011-04-05" "0.1" "Risk Auto Dice man page"
+.SH NAME
+riskautodice \- roll the dice in the classic board game "Risk"
+.SH SYNOPSIS
+riskautodice attacking defending
+.SH AUTOR
+Martin Ueding <dev@martin-ueding.de>
+
