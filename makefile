@@ -1,3 +1,5 @@
+# Copyright (c) 2011 Martin Ueding <dev@martin-ueding.de>
+
 devel/l10n/main.pot: auto_dice.py
 	xgettext -o devel/l10n/main.pot auto_dice.py
 
