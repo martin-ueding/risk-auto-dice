@@ -9,8 +9,8 @@ import optparse
 import gettext
 
 def main():
-	gettext.bindtextdomain("main", "l10n")
-	gettext.textdomain("main")
+	gettext.bindtextdomain("riskautodice", "l10n")
+	gettext.textdomain("riskautodice")
 	_ = gettext.gettext
 
 	parser = optparse.OptionParser(description=_('automates the dice rolling in the classic game "risk"').decode("utf-8"), usage=_("usage: %prog attacking defending").decode("utf-8"))
