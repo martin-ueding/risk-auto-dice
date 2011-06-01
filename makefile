@@ -2,8 +2,8 @@
 
 all: devel/l10n/riskautodice.pot l10n/de_DE/LC_MESSAGES/riskautodice.mo
 
-devel/l10n/riskautodice.pot: risk_auto_dice.py
-	xgettext -o devel/l10n/riskautodice.pot risk_auto_dice.py
+devel/l10n/riskautodice.pot: riskautodice
+	xgettext -o devel/l10n/riskautodice.pot riskautodice
 
 l10n/de_DE/LC_MESSAGES/riskautodice.mo: devel/l10n/de.po
 	msgfmt -o l10n/de_DE/LC_MESSAGES/riskautodice.mo devel/l10n/de.po
