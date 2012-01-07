@@ -1,9 +1,12 @@
 # Copyright (c) 2011 Martin Ueding <dev@martin-ueding.de>
 
-all: devel/l10n/riskautodice.pot l10n/de_DE/LC_MESSAGES/riskautodice.mo
+all: l10n/riskautodice.pot l10n/de_DE/LC_MESSAGES/riskautodice.mo riskautodice.1
 
-devel/l10n/riskautodice.pot: riskautodice
-	xgettext -o $@ $^
+l10n/riskautodice.pot: riskautodice
+	xgettext -o $@ $^ --language Python
 
-l10n/de_DE/LC_MESSAGES/riskautodice.mo: devel/l10n/de.po
+l10n/de_DE/LC_MESSAGES/riskautodice.mo: l10n/de.po
 	msgfmt -o $@ $^
+
+riskautodice.1: riskautodice.1.markdown
+	pandoc -s $< -o $@
