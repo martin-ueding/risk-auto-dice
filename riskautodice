@@ -64,7 +64,7 @@ def main():
 		print _("attacker wins with %s units left") % attacking
 	else:
 		print _("defender wins with %s units left") % defending
-		
+
 
 if __name__ == "__main__":
 	main()
