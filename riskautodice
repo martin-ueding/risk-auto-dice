@@ -1,7 +1,7 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
-# Copyright (c) 2011 Martin Ueding <dev@martin-ueding.de>
+# Copyright (c) 2011-2012 Martin Ueding <dev@martin-ueding.de>
 
 import sys
 import random
@@ -61,9 +61,9 @@ def main():
 			print
 
 	if attacking > 0:
-		print _("attacker wins with %s units left"), attacking
+		print _("attacker wins with %s units left") % attacking
 	else:
-		print _("defender wins with %s units left"), defending
+		print _("defender wins with %s units left") % defending
 		
 
 if __name__ == "__main__":
