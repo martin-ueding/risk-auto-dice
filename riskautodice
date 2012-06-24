@@ -37,7 +37,6 @@ def main():
 		for i in range(len(blue_dice)):
 			blue_dice[i] = random.randint(1, 6)
 
-
 		red_dice.sort()
 		blue_dice.sort()
 
@@ -65,7 +64,5 @@ def main():
 	else:
 		print _("defender wins with %s units left") % defending
 
-
 if __name__ == "__main__":
 	main()
-
