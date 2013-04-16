@@ -1,3 +1,5 @@
+.. Copyright © 2013 Martin Ueding <dev@martin-ueding.de>
+
 ############
 riskautodice
 ############
@@ -24,27 +26,6 @@ surely use the supplied red and blue dice, but that can become a little
 tedious after a while. Use this program to focus on your tactics instead
 on rolling the dice.
 
-OPTIONS
-=======
-
-EXIT STATUS
-===========
-
-ENVIRONMENT
-===========
-
-FILES
-=====
-
-CONFORMING TO
-=============
-
-NOTES
-=====
-
-BUGS
-====
-
 EXAMPLE
 =======
 
@@ -59,7 +40,3 @@ Display every intermediate result as well:
 ::
 
     riskautodice -v 139 98
-
-SEE ALSO
-========
-
