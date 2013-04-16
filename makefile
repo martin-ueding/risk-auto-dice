@@ -2,6 +2,10 @@
 
 all: l10n/riskautodice.pot l10n/de_DE/LC_MESSAGES/riskautodice.mo riskautodice.1
 
+install:
+	install -d "$(DESTDIR)/usr"
+	install riskautodice -t "$(DESTDIR)/usr"
+
 l10n/riskautodice.pot: riskautodice
 	xgettext -o $@ $^ --language Python
 
