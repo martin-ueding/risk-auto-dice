@@ -2,6 +2,7 @@
 
 all: l10n/riskautodice.pot l10n/de_DE/LC_MESSAGES/riskautodice.mo riskautodice.1
 
+# TODO Install the l10n files as well.
 install:
 	install -d "$(DESTDIR)/usr"
 	install riskautodice -t "$(DESTDIR)/usr"
